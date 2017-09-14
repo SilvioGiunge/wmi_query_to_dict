@@ -2,12 +2,12 @@
 # -*- coding: utf-8 -*-
 
 
-from wmi_parse import set_parser
-from wmi_query import wmi_query
+from wmi_query_to_dict import wmi_parse
+from wmi_query_to_dict import wmi_query
 
 
 def main():
-    wmi = wmi_query(opts=_opts)
+    wmi = wmi_query.wmi_query(opts=_opts)
     wmi.run()
     for x in wmi.data_dict[wmi.name()]:
         print "\n\t{}\n".format(wmi.name())
@@ -17,5 +17,5 @@ def main():
 
 
 if __name__ == "__main__":
-    _opts = vars(set_parser())
+    _opts = vars(wmi_parse.set_parser())
     main()

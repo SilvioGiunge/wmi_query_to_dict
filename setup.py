@@ -6,5 +6,5 @@ setup(
     packages=find_packages(),
     author='Silvio AS a.k.a kanazuchi',
     author_email='contato@kanazuchi.com',
-    scripts=['wmi_/wmi_query_cmd.py'],
+    scripts=['wmi_query_to_dict/wmi_query_cmd.py'],
 )
