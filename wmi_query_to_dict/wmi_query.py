@@ -57,5 +57,8 @@ class wmi_query(object):
     def get_item_keys(self):
         return [x for x in self.data_dict[self.dict_name][0]]
 
+    def name(self):
+        return self.dict_name
+
     def run(self):
         self.get_wmi_data()

@@ -17,12 +17,16 @@ def set_parser():
         help="Password of the user to connect on the machine."
         )
     parser.add_argument(
-        "-h", dest="host", action="store",
+        "-ip", dest="host", action="store",
         help="IP of the Host to get wmi queries. Eg: 192.168.1.1"
         )
     parser.add_argument(
-        "-d", dest="delimiter", action="store", default="\01",
-        help="Delimiter for queries. Default: \01"
+        "-del", dest="delimiter", action="store", default="\|",
+        help="Delimiter for queries. Default: |"
+        )
+    parser.add_argument(
+        "-d", dest="domain", action="store",
+        help="Delimiter for queries. Default: |"
         )
     parser.add_argument(
         "-n", dest="namespace", action="store", default="ROOT/cimv2",
