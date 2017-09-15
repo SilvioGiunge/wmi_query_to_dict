@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: wmi-query
+Version: 0.1
+Summary: A simple way to convert wmi data from wmic into dict objects.
+Home-page: UNKNOWN
+Author: Silvio AS a.k.a kanazuchi
+Author-email: contato@kanazuchi.com
+License: BSD
+Description: UNKNOWN
+Keywords: wmi wmic
+Platform: UNKNOWN
