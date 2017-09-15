@@ -6,5 +6,6 @@ setup(
     packages=find_packages(),
     author='Silvio AS a.k.a kanazuchi',
     author_email='contato@kanazuchi.com',
-    scripts=['wmi_query_to_dict/wmi_query_cmd.py'],
+    scripts=['wmi_query/wmi_query_cmd'],
+    description="A simple way to convert wmi data from wmic into dict objects.",
 )

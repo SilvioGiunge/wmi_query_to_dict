@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 
-from wmi_query_to_dict import wmi_parse
-from wmi_query_to_dict import wmi_query
+from wmi_query import wmi_parse
+from wmi_query import wmi_query
 
 
 def main():
