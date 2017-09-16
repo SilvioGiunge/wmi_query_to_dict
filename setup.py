@@ -6,6 +6,7 @@ setup(
     license="BSD",
     packages=find_packages(),
     keywords="wmi wmic",
+    url="https://github.com/kanazux/wmi_query",
     install_requires=['wmic'],
     author='Silvio AS a.k.a kanazuchi',
     author_email='contato@kanazuchi.com',
