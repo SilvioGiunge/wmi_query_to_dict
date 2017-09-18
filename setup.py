@@ -12,4 +12,5 @@ setup(
     author_email='contato@kanazuchi.com',
     scripts=['scripts/wmi_query_cmd'],
     description="A simple way to convert wmi data from wmic into dict objects.",
+    install_requires=['pyasn1', 'pycrypto', 'impacket',],
 )
