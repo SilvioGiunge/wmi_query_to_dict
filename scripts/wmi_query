@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 
+import sys
 from wmi_query import wmi_parse
 from wmi_query import wmi_query
 
@@ -14,6 +15,7 @@ def main():
         for y in wmi.get_item_keys():
             print " {}:\t{}".format(y, wmi.data_dict[wmi.name()][x][y])
     print "\n"
+    sys.exit(0)
 
 
 if __name__ == "__main__":

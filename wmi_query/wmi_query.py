@@ -22,16 +22,10 @@ class wmi_query(object):
 
     def get_wmi_data(self):
         _wmi_data = wmi_conn.wmi_conn(self.host, self.user, self.password, self.domain, self.namespace, self.query)
-        _list_wmi_data = []
-        try:
-            while True:
-                _list_wmi_data.append(_wmi_data.Next(0xffffffff, 1)[0])
-        except DCERPCException:
-            pass
         _cont = 0
-        self.dict_name = _list_wmi_data[0].getClassName()
+        self.dict_name = _wmi_data[0].getClassName()
         self.data_dict[self.dict_name] = defaultdict()
-        for data in _list_wmi_data:
+        for data in _wmi_data:
             self.data_dict[self.dict_name][_cont] = defaultdict(lambda: False)
             data_properties = data.getProperties()
             for item in data_properties:
