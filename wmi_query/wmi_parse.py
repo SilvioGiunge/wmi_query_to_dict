@@ -1,12 +1,14 @@
-#!/usr/local/bin/python2.7
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
+#
+# Return arguments for the script wmi_query.
+#
 
 import argparse
 
 
 def set_parser():
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(add_help=True, description="Get wmi classes objects. Use -h to get help!")
 
     parser.add_argument(
         "-u", dest="user", action="store",
@@ -17,16 +19,12 @@ def set_parser():
         help="Password of the user to connect on the machine."
         )
     parser.add_argument(
-        "-ip", dest="host", action="store",
+        "-a", dest="address", action="store",
         help="IP of the Host to get wmi queries. Eg: 192.168.1.1"
         )
     parser.add_argument(
-        "-del", dest="delimiter", action="store", default="\|",
-        help="Delimiter for queries. Default: |"
-        )
-    parser.add_argument(
-        "-d", dest="domain", action="store",
-        help="Delimiter for queries. Default: |"
+        "-d", dest="domain", action="store", default="WORKGROUP",
+        help="Domain to check. Default: WORKGROUP."
         )
     parser.add_argument(
         "-n", dest="namespace", action="store", default="ROOT/cimv2",
@@ -37,4 +35,4 @@ def set_parser():
         help="Query to consult wmi databases. Eg: 'SELECT * FROM Win32_process'"
         )
 
-    return parser.parse_args()
+    return parser

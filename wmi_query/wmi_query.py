@@ -1,10 +1,9 @@
-#!/usr/local/bin/python2.7
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 
 import wmi_conn
 from collections import defaultdict
-from impacket.dcerpc.v5.dcom.wmi import DCERPCException
 
 
 class wmi_query(object):
@@ -14,9 +13,9 @@ class wmi_query(object):
         self.password = opts['password']
         self.host = opts['host']
         self.domain = opts['domain']
-        self.delimiter = opts['delimiter']
         self.namespace = opts['namespace']
         self.query = opts['query']
+        self.delimiter = "|"
         self.data_dict = defaultdict(lambda: False)
         self.dict_name = ""
 

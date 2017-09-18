@@ -1,8 +1,10 @@
-#!/usr/local/bin/python2.7
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-# This file was created usinw.g example the python library impacket.
+# This file was created using example of the python library impacket.
 # Impacket project: https://github.com/CoreSecurity/impacket
+#
+# win_conn retunt a list of wmi objects of the query executed.
 #
 
 
