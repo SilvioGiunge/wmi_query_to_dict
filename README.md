@@ -1,5 +1,6 @@
-# py-wmi-query
-Get wmi class object from msrpc
+# wmi-query
+###Get wmi class object from msrpc
+#### Version: 0.1.2
 
 The script wmi_query make a query and print on the screen the wmi class object.
 Both keys and values will be printed for each object returned by the query.
@@ -23,7 +24,7 @@ optional arguments:
 %> python setup.py install
 %> pip wmi-query install
 ```
-## [\[PyPi\]](https://pypi.python.org/pypi/py-wmi-query "py-wmi-query on PyPi")
+## [\[PyPi\]](https://pypi.python.org/pypi/wmi-query "wmi-query on PyPi")
 
 ## Requeriment
 .*Lib impacket
