@@ -23,7 +23,7 @@ optional arguments:
 %> python setup.py install
 %> pip wmi-query install
 ```
-# [\[PyPi\]](https://pypi.python.org/pypi/py-wmi-query "py-wmi-query on PyPi")
+## [\[PyPi\]](https://pypi.python.org/pypi/py-wmi-query "py-wmi-query on PyPi")
 
 ## Requeriment
 .*Lib impacket
