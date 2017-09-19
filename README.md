@@ -26,4 +26,4 @@ optional arguments:
 ```
 
 ## Requeriment
-..* Lib impacket
+.*Lib impacket
