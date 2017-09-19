@@ -17,3 +17,12 @@ optional arguments:
   -n NAMESPACE  Namespace for classes. Default: ROOT/cimv2
   -q QUERY      Query to consult wmi databases. Eg: 'SELECT * FROM Win32_process'
 ```
+
+# Install
+```
+%> python setup.py install
+%> pip wmi-query install
+```
+
+# Requeriment
+Lib impacket
