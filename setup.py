@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="py-wmi-query",
-    version="0.1",
+    version="0.1.1",
     license="BSD2CLAUSE",
     packages=find_packages(),
     keywords="wmi impacket",
