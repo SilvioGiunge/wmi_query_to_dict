@@ -4,6 +4,7 @@
 # Return arguments for the script wmi_query.
 #
 
+
 import argparse
 
 

@@ -1,8 +1,8 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="wmi_query",
-    version="0.1",
+    name="wmi-query",
+    version="0.1.1",
     license="BSD",
     packages=find_packages(),
     keywords="wmi wmic",

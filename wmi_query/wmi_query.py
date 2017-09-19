@@ -11,7 +11,7 @@ class wmi_query(object):
     def __init__(self, opts):
         self.user = opts['user']
         self.password = opts['password']
-        self.host = opts['host']
+        self.host = opts['address']
         self.domain = opts['domain']
         self.namespace = opts['namespace']
         self.query = opts['query']
