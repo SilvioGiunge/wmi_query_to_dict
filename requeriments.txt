@@ -1,1 +1,1 @@
-impacket==0.9.15
+impacket>=0.9.15

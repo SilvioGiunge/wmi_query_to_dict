@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 #
 # Get wmi class object from windows server
-# Print class name, keys ad values for each object founded
+# Print class name, keys and values for each object founded
 #
 
 import sys
