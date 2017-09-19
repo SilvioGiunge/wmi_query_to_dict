@@ -15,6 +15,12 @@ from impacket.dcerpc.v5.dcom.wmi import DCERPCException
 
 
 def wmi_conn(address, username, password, domain, namespace, query):
+    """
+    Create a connection with msrpc to get objects from wmi classes
+    Will return a list of this objects to be read posterioly
+    Others arguments can be used with the examples on the impacket library
+    To connect will be used only user, password, domain and address from user
+    """
     _dcom = DCOMConnection(address, username, password, domain, oxidResolver=True, doKerberos=False, kdcHost=address)
     _interface = _dcom.CoCreateInstanceEx(wmi.CLSID_WbemLevel1Login, wmi.IID_IWbemLevel1Login)
     _web_level1_login = wmi.IWbemLevel1Login(_interface)
