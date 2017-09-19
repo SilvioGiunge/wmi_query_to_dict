@@ -7,6 +7,7 @@ Both keys and values will be printed for each object returned by the query.
 # USAGE:
 Get wmi classes objects. Use -h to get help!
 
+```
 optional arguments:
   -h, --help    show this help message and exit
   -u USER       User to connect on the machine.
@@ -14,5 +15,5 @@ optional arguments:
   -a ADDRESS    IP of the Host to get wmi queries. Eg: 192.168.1.1
   -d DOMAIN     Domain to check. Default: WORKGROUP.
   -n NAMESPACE  Namespace for classes. Default: ROOT/cimv2
-  -q QUERY      Query to consult wmi databases. Eg: 'SELECT * FROM
-                Win32_process'
+  -q QUERY      Query to consult wmi databases. Eg: 'SELECT * FROM Win32_process'
+```
