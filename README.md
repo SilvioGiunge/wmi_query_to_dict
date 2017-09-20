@@ -27,4 +27,4 @@ optional arguments:
 ### [\[PyPi\]](https://pypi.python.org/pypi/wmi-query "wmi-query on PyPi")
 
 ## Requeriment
-.*Lib impacket
+..* Lib impacket
