@@ -2,10 +2,11 @@
 # -*- coding: utf-8 -*-
 #
 # The class wmi_query returns a defaultdict with objects of specific class
-# 
+#
 
 import wmi_conn
 from collections import defaultdict
+from datetime import datetime, timedelta
 
 
 class wmi_query(object):
@@ -57,6 +58,14 @@ class wmi_query(object):
         Return all keys of the object founded by the query.
         """
         return [x for x in self.data_dict[self.dict_name][0]]
+
+    def conv_ldap_timestamp(self, ldap_ts):
+        """
+        Return a datetime object from a ldap timestamp.
+        Epoch starts with date 1601, 1, 1.
+        Util for fields like lastLogon.
+        """
+        return datetime(1601, 1, 1) + timedelta(seconds=ldap_ts/10**7)
 
     def name(self):
         """
