@@ -1,16 +1,16 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-#
-# Return arguments for the script wmi_query.
-#
+"""Return arguments for the script wmi_query."""
 
 
 import argparse
 
 
 def set_parser():
-    parser = argparse.ArgumentParser(add_help=True, description="Get wmi classes objects. Use -h to get help!")
-
+    """Set parser for wmi-query script."""
+    parser = argparse.ArgumentParser(add_help=True,
+                                     description=("Get wmi classes objects. "
+                                                  "Use -h to get help!"))
     parser.add_argument(
         "-u", dest="user", action="store",
         help="User to connect on the machine."
@@ -33,7 +33,8 @@ def set_parser():
         )
     parser.add_argument(
         "-q", dest="query", action="store",
-        help="Query to consult wmi databases. Eg: 'SELECT * FROM Win32_process'"
+        help=("Query to consult wmi databases. "
+              "Eg: 'SELECT * FROM Win32_process'")
         )
 
     return parser
