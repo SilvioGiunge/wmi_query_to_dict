@@ -16,9 +16,9 @@ def main():
     wmi = wmi_query.wmi_query(opts=_opts)
     wmi.run()
     for x in wmi.data_dict[wmi.name()]:
-        print "\n\t{}\n".format(wmi.name())
+        print("\n\t{}\n".format(wmi.name()))
         for y in wmi.get_item_keys():
-            print " {}:\t{}".format(y, wmi.data_dict[wmi.name()][x][y])
+            print(" {}:\t{}".format(y, wmi.data_dict[wmi.name()][x][y]))
 
 
 if(__name__ == "__main__"):
