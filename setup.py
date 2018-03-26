@@ -12,4 +12,5 @@ setup(
     scripts=['scripts/wmi-query'],
     description="A simple way to convert wmi data from wmi class objects into defaultdict.",
     install_requires=['impacket'],
+    zip_safe=False
 )
