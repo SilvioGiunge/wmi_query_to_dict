@@ -13,7 +13,7 @@ from wmi_query import wmi_query
 
 
 def main():
-    wmi = wmi_query.wmi_query(opts=_opts)
+    wmi = wmi_query(opts=_opts)
     wmi.run()
     for x in wmi.data_dict[wmi.name()]:
         print("\n\t{}\n".format(wmi.name()))
