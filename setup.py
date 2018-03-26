@@ -11,6 +11,6 @@ setup(
     author_email='alvolivre@live.com',
     scripts=['scripts/wmi-query'],
     description="A simple way to convert wmi data from wmi class objects into defaultdict.",
-    install_requires=['impacket'],
+    install_requires=['impacket', 'pycrypto', 'pyasn1'],
     zip_safe=False
 )
