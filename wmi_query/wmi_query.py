@@ -3,7 +3,7 @@
 """The class wmi_query returns a defaultdict with objects of specific class."""
 
 
-import wmi_conn
+from . import wmi_conn
 from collections import defaultdict
 from datetime import datetime, timedelta
 
