@@ -38,8 +38,8 @@ def wmi_conn(address, username, password, domain, namespace, query):
             _list_wmi_data.append(_iwb_class_object.Next(0xffffffff, 1)[0])
     except DCERPCException:
         pass
-
-    _iwb_nt_login.RemRelease()
-    _dcom.disconnect()
+    finally:
+        _iwb_nt_login.RemRelease()
+        _dcom.disconnect()
 
     return _list_wmi_data
