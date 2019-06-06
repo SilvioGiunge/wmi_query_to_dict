@@ -1,6 +1,6 @@
 # wmi-query
 ### Get wmi class object from msrpc
-#### Version: 0.1.3
+#### Version: 0.1.5
 
 The script wmi-query make a query and print on the screen the wmi class object.
 Both keys and values will be printed for each object returned by the query.
