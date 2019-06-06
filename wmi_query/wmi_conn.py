@@ -25,8 +25,15 @@ def wmi_conn(address, username, password, domain, namespace, query):
     _dcom = DCOMConnection(address, username, password, domain,
                            oxidResolver=True, doKerberos=False,
                            kdcHost=address)
-    _interface = _dcom.CoCreateInstanceEx(wmi.CLSID_WbemLevel1Login,
-                                          wmi.IID_IWbemLevel1Login)
+    try:
+        _interface = _dcom.CoCreateInstanceEx(wmi.CLSID_WbemLevel1Login,
+                                              wmi.IID_IWbemLevel1Login)
+    except DCERPCException as e:
+        try:
+            _dcom.disconnect()
+        except KeyError:
+            pass
+        raise e
     _web_level1_login = wmi.IWbemLevel1Login(_interface)
     _iwb_nt_login = _web_level1_login.NTLMLogin(namespace, NULL, NULL)
     _web_level1_login.RemRelease()
