@@ -3,7 +3,7 @@
 """The class wmi_query returns a defaultdict with objects of specific class."""
 
 
-import wmi_conn
+from . import wmi_conn
 from collections import defaultdict
 from datetime import datetime, timedelta
 
@@ -59,7 +59,11 @@ class wmi_query(object):
 
         Eg: object.get_items('OS_Name')
         """
-        return set([self.data_dict[self.dict_name][x][item_name]
+        try:
+            return set([self.data_dict[self.dict_name][x][item_name]
+                    for x, y in enumerate(self.data_dict[self.dict_name])])
+        except TypeError:
+            return ([self.data_dict[self.dict_name][x][item_name]
                     for x, y in enumerate(self.data_dict[self.dict_name])])
 
     def get_item_keys(self):
